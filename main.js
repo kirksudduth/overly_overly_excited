@@ -17,7 +17,7 @@ let sentence = [
 
 let word_count = 1;
 
-function addExcitement(theWordArray) {
+function addExcitement(theWordArray, punctuation) {
   let buildMeUp = "";
 
   for (let i = 0; i < theWordArray.length; i++) {
@@ -31,7 +31,7 @@ function addExcitement(theWordArray) {
          */
     debugger;
     if (word_count % 3 === 0) {
-      buildMeUp += `${theWordArray[i]}! `;
+      buildMeUp += `${theWordArray[i]}${punctuation} `;
       word_count++;
     } else {
       buildMeUp += `${theWordArray[i]} `;
@@ -53,4 +53,4 @@ function addExcitement(theWordArray) {
   }
 }
 
-addExcitement(sentence);
+addExcitement(sentence, "?");

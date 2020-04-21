@@ -17,9 +17,9 @@ let sentence = [
 
 let word_count = 1;
 
-function addExcitement(theWordArray, punctuation) {
+function addExcitement(theWordArray, punctuation, num) {
   let buildMeUp = "";
-
+  let multi_punc = punctuation.repeat(num);
   for (let i = 0; i < theWordArray.length; i++) {
     /*
             If the current word's place (not index) in the array
@@ -31,7 +31,7 @@ function addExcitement(theWordArray, punctuation) {
          */
     debugger;
     if (word_count % 3 === 0) {
-      buildMeUp += `${theWordArray[i]}${punctuation} `;
+      buildMeUp += `${theWordArray[i]}${multi_punc} `;
       word_count++;
     } else {
       buildMeUp += `${theWordArray[i]} `;
@@ -53,4 +53,4 @@ function addExcitement(theWordArray, punctuation) {
   }
 }
 
-addExcitement(sentence, "?");
+addExcitement(sentence, "*", 4);

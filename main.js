@@ -14,7 +14,9 @@ let sentence = [
   "the",
   "moon",
 ];
-console.log(sentence.length);
+
+let word_count = 1;
+
 function addExcitement(theWordArray) {
   let buildMeUp = "";
 
@@ -28,31 +30,25 @@ function addExcitement(theWordArray) {
             Otherwise, just concatenate the word itself.
          */
     debugger;
-    // if (
-    //   sentence[i] === sentence[2] ||
-    //   sentence[5] ||
-    //   sentence[8] ||
-    //   sentence[11]
-    // ) {
-    //   buildMeUp += `${theWordArray[i]}! `;
-    // } else {
-    //   buildMeUp += `${theWordArray[i]} `;
-    // }
-    // // buildMeUp += `${theWordArray[i]} `;
-    // // Print buildMeUp to the console
-    // console.log(buildMeUp);
-
-    // that took about 2 hours to figure out i think
-    switch (sentence[i]) {
-      case sentence[2]:
-      case sentence[5]:
-      case sentence[8]:
-      case sentence[11]:
-        buildMeUp += `${theWordArray[i]}! `;
-        break;
-      default:
-        buildMeUp += `${theWordArray[i]} `;
+    if (word_count % 3 === 0) {
+      buildMeUp += `${theWordArray[i]}! `;
+      word_count++;
+    } else {
+      buildMeUp += `${theWordArray[i]} `;
+      word_count++;
     }
+    // that took about 2 hours to figure out i think
+    // ASK ABOUT SWITCH FUNCTION
+    // switch (sentence[i]) {
+    //   case sentence[i % 3 === 0]:
+    //     //   case sentence[5]:
+    //     //   case sentence[8]:
+    //     //   case sentence[11]:
+    //     buildMeUp += `${theWordArray[i]}! `;
+    //     break;
+    //   default:
+    //     buildMeUp += `${theWordArray[i]} `;
+    // }
     console.log(buildMeUp);
   }
 }
